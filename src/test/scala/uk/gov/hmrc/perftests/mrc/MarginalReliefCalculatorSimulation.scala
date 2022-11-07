@@ -28,5 +28,10 @@ class MarginalReliefCalculatorSimulation extends PerformanceTestRunner {
 
   setup("marginal-relief-calculation", "Marginal Relief Calculation") withRequests calculate
 
+  setup(
+    id= "config-year",
+    description = "Check for config year"
+  ) withRequests configYear
+
   runSimulation()
 }

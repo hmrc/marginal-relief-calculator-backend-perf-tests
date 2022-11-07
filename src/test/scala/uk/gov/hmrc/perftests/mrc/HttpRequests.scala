@@ -44,4 +44,9 @@ object HttpRequests extends ServicesConfiguration {
       .queryParam("profit", "100000")
       .queryParam("exemptDistributions", "10000")
       .check(status.is(200))
+
+  val configYear: HttpRequestBuilder =
+    http("Config Year")
+      .get(s"$baseUrl$route/config/2023")
+      .check(status.is(200))
 }
